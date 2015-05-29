@@ -36,12 +36,14 @@ function giveMeRandom() {
 	var rand = Math.floor(Math.random()*100)+1;
 	return rand;
 };
-
+	
 
 function showMe(key) {
 	var keyGiven = "_" + key;
 	var thisAnimation = $("<div class='" + keyGiven + "'></div>")
-		console.log(thisAnimation);
+		
+	$("." + keyGiven)[0].cloneNode(true).play();
+	$("." + keyGiven).trigger('play');
 
 		if (keyGiven === "_32") {
 			backgroundRandom();
