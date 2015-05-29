@@ -47,13 +47,19 @@ function showMe(key) {
 
 		if (keyGiven === "_32") {
 			backgroundRandom();
-		} else if (keyGiven === "_117") {
+		} else if (keyGiven === "_100") {
 					thisAnimation.css({
 						top: giveMeRandom() + "%",
 						left: giveMeRandom() + "%"
 					})//cssAnimation
 				$("body").append(thisAnimation);
-			}//ifStatement
+			} else if (keyGiven === "_102") {
+					thisAnimation.css({
+						left: giveMeRandom() + "%"
+					})//cssAnimation
+				$("body").append(thisAnimation);
+			} else if (keyGiven === "_104") {
+				}//ifStatement
 
 	$("body").append(thisAnimation);
 		
