@@ -32,23 +32,23 @@ function backgroundRandom() {
 		}//ifStatement
 	}//backgroundRandom
 
-function showMe(key) {
+function giveMeRandom() {
 	var rand = Math.floor(Math.random()*100)+1;
+	return rand;
+};
+
+
+function showMe(key) {
 	var keyGiven = "_" + key;
 	var thisAnimation = $("<div class='" + keyGiven + "'></div>")
-		if(keyGiven === "_98") {
-				thisAnimation.css({
-					top: rand + "%",
-					left: rand + "%"
-				})//cssAnimation
-		} else if(keyGiven === "_32") {
-			backgroundRandom();
-		
+		console.log(thisAnimation);
 
+		if (keyGiven === "_32") {
+			backgroundRandom();
 		} else if (keyGiven === "_117") {
 					thisAnimation.css({
-						top: rand + "%",
-						left: rand + "%"
+						top: giveMeRandom() + "%",
+						left: giveMeRandom() + "%"
 					})//cssAnimation
 				$("body").append(thisAnimation);
 			}//ifStatement
