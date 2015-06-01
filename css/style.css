@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-* {
-  font-family: 'Open Sans Condensed', sans-serif; }
+
+* { font-family: 'Open Sans Condensed', sans-serif; }
 
 html, body {
   margin: 0;
@@ -251,6 +251,10 @@ div {
   }
 }
 
+.reverse {
+  transform: rotateY(180deg);
+
+}
 
 .st0 { 
   width: 70%;
@@ -261,7 +265,7 @@ div {
   stroke:white; 
   stroke-width:35; 
   opacity: 0;
-  stroke-miterlimit:10; 
+  stroke-miterlimit:0; 
   stroke-dasharray: 1500;
   stroke-dashoffset: 0;
   -webkit-animation: leftToRight .7s linear forwards;
@@ -285,6 +289,28 @@ div {
     }
   }
 
+
+.st1 { 
+  width: 12%;
+  left: 10%;
+  top: 15%;
+  position: absolute;
+  -webkit-transform: rotateY(40deg);
+
+  -webkit-animation: revealVertical .7s linear forwards;
+}
+
+  @-webkit-keyframes revealVertical {
+    0% {
+       -webkit-clip-path: polygon(0 -100%, 100% -100%, 100% 0, 0 0);
+    }
+    60% {
+    -webkit-clip-path: polygon(0 -100%, 100% -100%, 100% 125%, 0 125%);
+    }
+    100% {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+  }
 
 
 
